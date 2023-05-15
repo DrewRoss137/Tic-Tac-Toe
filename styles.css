@@ -62,8 +62,8 @@ footer {
   justify-content: flex-end;
 }
 
-.github-logo {
-  filter: brightness(0) invert(1);
+.github {
+  fill: rgba(255, 255, 255, 1);
   height: 24.5px;
   opacity: 7%;
   padding-bottom: 3px;
