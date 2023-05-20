@@ -1,47 +1,46 @@
 html {
-  color: rgba(255, 255, 255, 1);
   scroll-behavior: smooth;
 }
 
 html,
 button {
+  color: rgba(255, 255, 255, 1);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 html,
 .menu,
-.symbol-container,
-.symbol-button-container,
-.symbol-button,
-.symbol-icon,
+.symbol-select-container,
+.symbol-select-button-container,
+.opposition-select-container,
+button,
 footer {
   display: flex;
 }
 
 html,
 .menu,
-.symbol-container,
-.symbol-button-container,
-.symbol-button,
-.symbol-icon,
+.symbol-select-container,
+.symbol-select-button-container,
+.opposition-select-container,
+button,
 footer {
   align-items: center;
 }
 
 html,
 .menu,
-.symbol-container,
-.symbol-button-container,
-.symbol-button,
-.symbol-icon {
+.symbol-select-container,
+.symbol-select-button-container,
+.opposition-select-container,
+button {
   justify-content: center;
 }
 
 html,
 body,
 main,
-h1,
-h2 {
+h1 {
   margin: 0;
 }
 
@@ -54,140 +53,200 @@ main {
 html,
 body,
 main,
-.menu {
+.menu,
+.symbol-select-button-container {
   height: 100%;
 }
 
 html,
 body,
 main,
-.menu,
-.symbol-button-container,
-.symbol-button,
+.symbol-select-button-container,
 footer {
   width: 100%;
 }
 
 body {
-  background-attachment: fixed;
   background-image: radial-gradient(
     circle at center,
-    rgba(0, 41, 82, 1),
-    rgba(0, 30, 61, 1)
+    rgba(51, 51, 51, 1),
+    rgba(0, 0, 0, 1)
   );
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.symbol-select-x {
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.symbol-select-x,
+.symbol-select-o {
+  height: 100px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
+  width: 100px;
+}
+
+.symbol-select-x:before {
+  height: 100%;
+  left: 50%;
+  margin-left: -15%;
+  width: 30%;
+}
+
+.symbol-select-x:before,
+.symbol-select-x:after {
+  background-color: rgba(0, 255, 255, 1);
+  content: "";
+  position: absolute;
+}
+
+.symbol-select-x:after {
+  height: 30%;
+  margin-top: -15%;
+  top: 50%;
+  width: 100%;
+}
+
+.symbol-select-o {
+  border-color: rgba(255, 255, 0, 1);
+  border-radius: 50%;
+  border-width: 22px;
+  box-sizing: border-box;
+}
+
 .menu {
+  flex-direction: column;
   gap: 24px;
 }
 
-.menu,
-.symbol-container {
-  flex-direction: column;
-}
-
 h1 {
+  font-size: 48px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
 }
 
 h1,
 button {
-  color: rgba(51, 153, 255, 1);
-}
-
-h1,
-h2,
-button {
   font-weight: 900;
 }
 
-.menu-title {
-  font-size: 48px;
-}
-
-.symbol-container {
+.symbol-select-container {
   background-image: radial-gradient(
     circle at center,
-    rgba(0, 30, 61, 1),
-    rgba(0, 20, 41, 1)
+    rgba(71, 71, 71, 1),
+    rgba(21, 21, 21, 1)
   );
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   gap: 12px;
-  height: 190px;
-  width: 550px;
+  height: 120px;
+  padding: 16px;
+  width: 400px;
 }
 
-.symbol-container,
-.symbol-button-container,
-.symbol-button,
-button {
+.symbol-select-container,
+.symbol-select-button-container,
+.symbol-select-button-container:hover,
+.symbol-select-o,
+button,
+.settings-container {
+  border-style: solid;
+}
+
+.symbol-select-container,
+.symbol-select-button-container,
+.symbol-select-button-container:hover,
+button,
+.settings-container {
+  border-color: rgba(255, 255, 255, 0.02);
+  border-width: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.symbol-select-container,
+.symbol-select-button-container,
+button,
+.settings-container {
   border-radius: 15px;
 }
 
-.symbol-container,
-.symbol-button-container {
-  padding: 12px;
-}
-
-h2 {
-  color: rgba(0, 71, 143, 1);
-  text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
-}
-
-.symbol-button-container {
+.symbol-select-button-container,
+button,
+.settings-container {
   background-image: radial-gradient(
     circle at center,
-    rgba(0, 20, 41, 1),
-    rgba(0, 10, 20, 1)
+    rgba(61, 61, 61, 1),
+    rgba(11, 11, 11, 1)
   );
-  box-sizing: border-box;
-  gap: 8px;
-  transition: all 0.5s ease-in-out;
 }
 
-.symbol-button-container,
-.symbol-button {
-  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 1);
-}
-
-.symbol-button,
-.symbol-menu-continue-button {
-  background-image: radial-gradient(
-    circle at center,
-    rgba(0, 51, 102, 1),
-    rgba(0, 41, 82, 1)
-  );
-  transition: all 0.5s ease-in-out;
-}
-
-.symbol-button,
+.symbol-select-button-container,
 button {
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
-.symbol-button:hover,
-.symbol-menu-continue-button:hover {
-  transform: scale(1.05);
+.symbol-select-button-container:hover {
+  border-width: 1px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  outline-style: solid;
+  outline-width: 1px;
 }
 
-.symbol-icon {
-  fill: rgba(51, 153, 255, 1);
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 1));
-  height: 125px;
-  width: 125px;
+.symbol-select-button-container:hover,
+button:hover {
+  scale: 1.03;
 }
 
-button {
-  border: none;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
-  font-size: 20px;
-  height: 50px;
-  padding: 8px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
-  width: 250px;
+#symbol-select-x-container:hover {
+  border-color: rgba(0, 255, 255, 1);
+  filter: drop-shadow(0px 0px 3px rgba(0, 255, 255, 1));
+  outline-color: rgba(0, 255, 255, 1);
+}
+
+#symbol-select-o-container:hover {
+  border-color: rgba(255, 255, 0, 1);
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 0, 1));
+  outline-color: rgba(255, 255, 0, 1);
+}
+
+.opposition-select-container {
+  gap: 16px;
+}
+
+.opposition-select-button {
+  height: 150px;
+  padding: 16px;
+  width: 350px;
+}
+
+.opposition-select-icon {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+  height: 130px;
+  width: 130px;
+}
+
+#ai-select-icon {
+  fill: rgba(128, 255, 255, 1);
+}
+
+#player-select-icon {
+  fill: rgba(255, 255, 128, 1);
+}
+
+.back-button,
+.play-button {
+  font-size: 18px;
+  height: 40px;
+  text-align: center;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+  width: 200px;
+}
+
+.settings-container {
+  height: 400px;
+  width: 350px;
 }
 
 footer {
@@ -198,7 +257,7 @@ footer {
 }
 
 .github {
-  fill: rgba(0, 0, 0, 1);
+  fill: rgba(255, 255, 255, 1);
   height: 24.5px;
   opacity: 7%;
   padding-bottom: 3px;
@@ -208,48 +267,30 @@ footer {
   width: 24px;
 }
 
-#blues {
-  color: rgba(0, 10, 20, 1);
-  color: rgba(0, 20, 41, 1);
-  color: rgba(0, 30, 61, 1);
-  color: rgba(0, 41, 82, 1);
-  color: rgba(0, 51, 102, 1);
-  color: rgba(0, 61, 122, 1);
-  color: rgba(0, 71, 143, 1);
-  color: rgba(0, 82, 163, 1);
-  color: rgba(0, 92, 184, 1);
-  color: rgba(0, 102, 204, 1);
-  color: rgba(0, 102, 204, 1);
-  color: rgba(0, 112, 224, 1);
-  color: rgba(0, 122, 245, 1);
-  color: rgba(10, 133, 255, 1);
-  color: rgba(31, 143, 255, 1);
-  color: rgba(51, 153, 255, 1);
-  color: rgba(71, 163, 255, 1);
-  color: rgba(92, 173, 255, 1);
-  color: rgba(112, 184, 255, 1);
-  color: rgba(133, 194, 255, 1);
-}
-
-#yellows {
-  color: rgba(20, 16, 0, 1);
-  color: rgba(41, 33, 0, 1);
-  color: rgba(61, 49, 0, 1);
-  color: rgba(82, 65, 0, 1);
-  color: rgba(102, 82, 0, 1);
-  color: rgba(122, 98, 0, 1);
-  color: rgba(143, 114, 0, 1);
-  color: rgba(163, 131, 0, 1);
-  color: rgba(184, 147, 0, 1);
-  color: rgba(204, 163, 0, 1);
-  color: rgba(224, 180, 0, 1);
-  color: rgba(245, 196, 0, 1);
-  color: rgba(255, 206, 10, 1);
-  color: rgba(255, 210, 31, 1);
-  color: rgba(255, 214, 51, 1);
-  color: rgba(255, 218, 71, 1);
-  color: rgba(255, 222, 92, 1);
-  color: rgba(255, 226, 112, 1);
-  color: rgba(255, 231, 133, 1);
-  color: rgba(255, 235, 153, 1);
+#colours {
+  color: rgba(0, 0, 0, 1);
+  color: rgba(20, 20, 20, 1);
+  color: rgba(31, 31, 31, 1);
+  color: rgba(41, 41, 41, 1);
+  color: rgba(51, 51, 51, 1);
+  color: rgba(61, 61, 61, 1);
+  color: rgba(71, 71, 71, 1);
+  color: rgba(82, 82, 82, 1);
+  color: rgba(92, 92, 92, 1);
+  color: rgba(102, 102, 102, 1);
+  color: rgba(112, 112, 112, 1);
+  color: rgba(122, 122, 122, 1);
+  color: rgba(133, 133, 133, 1);
+  color: rgba(143, 143, 143, 1);
+  color: rgba(153, 153, 153, 1);
+  color: rgba(163, 163, 163, 1);
+  color: rgba(173, 173, 173, 1);
+  color: rgba(184, 184, 184, 1);
+  color: rgba(194, 194, 194, 1);
+  color: rgba(204, 204, 204, 1);
+  color: rgba(214, 214, 214, 1);
+  color: rgba(224, 224, 224, 1);
+  color: rgba(235, 235, 235, 1);
+  color: rgba(245, 245, 245, 1);
+  color: rgba(255, 255, 255, 1);
 }
