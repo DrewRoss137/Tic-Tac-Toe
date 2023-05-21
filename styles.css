@@ -3,9 +3,131 @@ html {
 }
 
 html,
+input,
 button {
   color: rgba(255, 255, 255, 1);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html,
+.menu,
+.navigation-buttons-container {
+  display: flex;
+}
+
+html,
+.menu,
+.navigation-buttons-container {
+  align-items: center;
+}
+
+html,
+.menu,
+.navigation-buttons-container {
+  justify-content: center;
+}
+
+html,
+.menu {
+  flex-direction: column;
+}
+
+html,
+body,
+main,
+.menu,
+footer {
+  width: 100%;
+}
+
+html,
+body,
+main,
+.menu {
+  height: 100%;
+}
+
+html,
+body,
+h1 {
+  margin: 0;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(51, 51, 51, 1),
+    rgba(0, 0, 0, 1)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu {
+  gap: 16px;
+}
+
+h1 {
+  font-size: 48px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+h1,
+input,
+button {
+  font-weight: 900;
+}
+
+input {
+  outline: none;
+  text-align: left;
+}
+
+input,
+button,
+.menu-container {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(61, 61, 61, 1),
+    rgba(11, 11, 11, 1)
+  );
+  border-color: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border-width: 2px;
+  transition: transform 0.7s ease-in-out;
+}
+
+input,
+button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+  font-size: 18px;
+  padding: 6px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+input::placeholder {
+  color: rgba(51, 51, 51, 1);
+}
+
+input:hover,
+button:hover {
+  transform: scale(1.03);
+}
+
+.name-input {
+  width: 300px;
+}
+
+.navigation-buttons-container {
+  gap: 12px;
+}
+
+button {
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
 }
 
 html,
@@ -14,6 +136,10 @@ html,
 .symbol-select-button-container,
 .opposition-select-container,
 button,
+.settings-container,
+.settings,
+.ai-difficulty-container,
+.navigation-buttons-container,
 footer {
   display: flex;
 }
@@ -24,6 +150,10 @@ html,
 .symbol-select-button-container,
 .opposition-select-container,
 button,
+.settings-container,
+.settings,
+.ai-difficulty-container,
+.navigation-buttons-container,
 footer {
   align-items: center;
 }
@@ -33,7 +163,10 @@ html,
 .symbol-select-container,
 .symbol-select-button-container,
 .opposition-select-container,
-button {
+button,
+.settings-container,
+.ai-difficulty-container,
+.navigation-buttons-container {
   justify-content: center;
 }
 
@@ -64,18 +197,12 @@ main,
 .symbol-select-button-container,
 footer {
   width: 100%;
-}
+} */
 
-body {
-  background-image: radial-gradient(
-    circle at center,
-    rgba(51, 51, 51, 1),
-    rgba(0, 0, 0, 1)
-  );
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+
+.player-name-input {
+  width: 300px;
 }
 
 .symbol-select-x {
@@ -84,7 +211,8 @@ body {
 }
 
 .symbol-select-x,
-.symbol-select-o {
+.symbol-select-o,
+.opposition-settings-icon {
   height: 100px;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
   width: 100px;
@@ -119,8 +247,14 @@ body {
 }
 
 .menu {
-  flex-direction: column;
   gap: 24px;
+}
+
+.menu,
+.settings-container,
+.settings,
+.ai-difficulty-container {
+  flex-direction: column;
 }
 
 h1 {
@@ -129,7 +263,8 @@ h1 {
 }
 
 h1,
-button {
+button,
+input {
   font-weight: 900;
 }
 
@@ -139,10 +274,14 @@ button {
     rgba(71, 71, 71, 1),
     rgba(21, 21, 21, 1)
   );
-  gap: 12px;
   height: 120px;
   padding: 16px;
   width: 400px;
+}
+
+.symbol-select-container,
+.navigation-buttons-container {
+  gap: 12px;
 }
 
 .symbol-select-container,
@@ -150,7 +289,8 @@ button {
 .symbol-select-button-container:hover,
 .symbol-select-o,
 button,
-.settings-container {
+.settings-container,
+input {
   border-style: solid;
 }
 
@@ -158,7 +298,8 @@ button,
 .symbol-select-button-container,
 .symbol-select-button-container:hover,
 button,
-.settings-container {
+.settings-container,
+input {
   border-color: rgba(255, 255, 255, 0.02);
   border-width: 2px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
@@ -167,13 +308,15 @@ button,
 .symbol-select-container,
 .symbol-select-button-container,
 button,
-.settings-container {
+.settings-container,
+input {
   border-radius: 15px;
 }
 
 .symbol-select-button-container,
 button,
-.settings-container {
+.settings-container,
+input {
   background-image: radial-gradient(
     circle at center,
     rgba(61, 61, 61, 1),
@@ -182,37 +325,47 @@ button,
 }
 
 .symbol-select-button-container,
-button {
-  cursor: pointer;
+button,
+input {
   transition: all 0.5s ease-in-out;
 }
 
-.symbol-select-button-container:hover {
-  border-width: 1px;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
-  outline-style: solid;
-  outline-width: 1px;
+.symbol-select-button-container,
+button {
+  cursor: pointer;
 }
 
 .symbol-select-button-container:hover,
-button:hover {
-  scale: 1.03;
+.opposition-select-button:hover,
+.ai-difficulty-button:hover {
+  border-width: 1px;
+}
+
+.symbol-select-button-container:hover,
+.opposition-select-button:hover,
+.ai-difficulty-button:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.symbol-select-button-container:hover,
+button:hover,
+input:hover {
+  scale: 1.05;
 }
 
 #symbol-select-x-container:hover {
   border-color: rgba(0, 255, 255, 1);
   filter: drop-shadow(0px 0px 3px rgba(0, 255, 255, 1));
-  outline-color: rgba(0, 255, 255, 1);
 }
 
 #symbol-select-o-container:hover {
   border-color: rgba(255, 255, 0, 1);
   filter: drop-shadow(0px 0px 3px rgba(255, 255, 0, 1));
-  outline-color: rgba(255, 255, 0, 1);
 }
 
-.opposition-select-container {
-  gap: 16px;
+.opposition-select-container,
+.ai-difficulty-container {
+  gap: 18px;
 }
 
 .opposition-select-button {
@@ -221,32 +374,104 @@ button:hover {
   width: 350px;
 }
 
+#ai-select-button:hover {
+  border-color: rgba(128, 255, 255, 1);
+  filter: drop-shadow(0px 0px 3px rgba(128, 255, 255, 1));
+}
+
+#player-select-button:hover {
+  border-color: rgba(255, 255, 128, 1);
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 128, 1));
+}
+
 .opposition-select-icon {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
   height: 130px;
   width: 130px;
 }
 
-#ai-select-icon {
+#ai-select-icon,
+#ai-settings-icon {
   fill: rgba(128, 255, 255, 1);
 }
 
-#player-select-icon {
+#player-select-icon,
+#player-settings-icon {
   fill: rgba(255, 255, 128, 1);
 }
 
-.back-button,
-.play-button {
-  font-size: 18px;
-  height: 40px;
+button {
   text-align: center;
+}
+
+button,
+input {
+  font-size: 18px;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+.back-button,
+.continue-button,
+.play-button,
+.ai-difficulty-button {
+  height: 40px;
   width: 200px;
 }
 
 .settings-container {
   height: 400px;
+  padding: 12px;
   width: 350px;
+}
+
+.settings {
+  gap: 32px;
+}
+
+#ai-settings-icon {
+  height: 100px;
+}
+
+input {
+  height: 22px;
+  outline: none;
+  padding: 8px;
+  width: 220px;
+}
+
+input::placeholder {
+  color: rgba(41, 41, 41, 1);
+}
+
+.ai-difficulty-button {
+  width: 160px;
+}
+
+#ai-easy-difficulty-button {
+  color: rgba(125, 255, 125, 1);
+}
+
+#ai-easy-difficulty-button:hover {
+  border-color: rgba(125, 255, 125, 1);
+  filter: drop-shadow(0px 0px 1px rgba(125, 255, 125, 1));
+}
+
+#ai-medium-difficulty-button {
+  color: rgba(255, 255, 125, 1);
+}
+
+#ai-medium-difficulty-button:hover {
+  border-color: rgba(255, 255, 125, 1);
+  filter: drop-shadow(0px 0px 1px rgba(255, 255, 125, 1));
+}
+
+#ai-hard-difficulty-button {
+  color: rgba(255, 125, 125, 1);
+}
+
+#ai-hard-difficulty-button:hover {
+  border-color: rgba(255, 125, 125, 1);
+  filter: drop-shadow(0px 0px 1px rgba(255, 125, 125, 1));
 }
 
 footer {
@@ -293,4 +518,4 @@ footer {
   color: rgba(235, 235, 235, 1);
   color: rgba(245, 245, 245, 1);
   color: rgba(255, 255, 255, 1);
-}
+} 
