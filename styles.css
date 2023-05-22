@@ -1,4 +1,163 @@
 html {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+header,
+main,
+.tic-tac-toe-container,
+.tic-tac-toe-grid,
+footer {
+  display: flex;
+}
+
+html,
+body,
+header,
+main,
+.tic-tac-toe-container,
+.tic-tac-toe-grid,
+footer {
+  align-items: center;
+}
+
+html,
+body,
+header,
+main,
+.tic-tac-toe-container,
+.tic-tac-toe-grid {
+  justify-content: center;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+html,
+body,
+main,
+#header-cross:before {
+  height: 100%;
+}
+
+html,
+body,
+header,
+main,
+#header-cross:after,
+footer {
+  width: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(51, 51, 51, 1),
+    rgba(0, 0, 0, 1)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+main {
+  flex-direction: column;
+}
+
+header {
+  padding: 16px;
+  right: 0;
+  top: 0;
+}
+
+header,
+footer {
+  left: 0;
+  position: fixed;
+}
+
+a,
+.tic-tac-toe-grid-square {
+  cursor: pointer;
+}
+
+.header-symbols {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
+  height: 100px;
+  width: 100px;
+}
+
+#header-cross {
+  position: relative;
+  transform: rotate(45deg);
+}
+
+#header-cross:before {
+  left: 50%;
+  margin-left: -15%;
+  width: 30%;
+}
+
+#header-cross:before,
+#header-cross:after {
+  background-color: rgba(70, 70, 255, 1);
+  content: "";
+  position: absolute;
+}
+
+#header-cross:after {
+  height: 30%;
+  margin-top: -15%;
+  top: 50%;
+}
+
+#header-circle {
+  border-color: rgba(255, 70, 70, 1);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 30px;
+  box-sizing: border-box;
+}
+
+.tic-tac-toe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: 500px;
+  width: 500px;
+}
+
+.tic-tac-toe-grid-square {
+  background-color: rgba(204, 204, 204, 1);
+  height: 160px;
+  width: 160px;
+}
+
+footer {
+  bottom: 0;
+  justify-content: flex-end;
+}
+
+.github {
+  fill: rgba(255, 255, 255, 1);
+  height: 24.5px;
+  opacity: 7%;
+  padding-bottom: 3px;
+  padding-left: 0px;
+  padding-right: 3px;
+  padding-top: 0px;
+  width: 24px;
+}
+
+/*
+html {
   scroll-behavior: smooth;
 }
 
@@ -199,7 +358,7 @@ footer {
   width: 100%;
 } */
 
-
+/*
 
 .player-name-input {
   width: 300px;
@@ -519,3 +678,4 @@ footer {
   color: rgba(245, 245, 245, 1);
   color: rgba(255, 255, 255, 1);
 } 
+/*
