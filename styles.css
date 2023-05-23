@@ -10,6 +10,8 @@ header,
 main,
 .tic-tac-toe-container,
 .tic-tac-toe-grid,
+.game-result-container,
+.game-result-panel,
 footer {
   display: flex;
 }
@@ -20,6 +22,8 @@ header,
 main,
 .tic-tac-toe-container,
 .tic-tac-toe-grid,
+.game-result-container,
+.game-result-panel,
 footer {
   align-items: center;
 }
@@ -29,12 +33,16 @@ body,
 header,
 main,
 .tic-tac-toe-container,
-.tic-tac-toe-grid {
+.tic-tac-toe-grid,
+.game-result-container,
+.game-result-panel {
   justify-content: center;
 }
 
 html,
-body {
+body,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -67,7 +75,9 @@ body {
 }
 
 body,
-main {
+main,
+.tic-tac-toe-container,
+.game-result-panel {
   flex-direction: column;
 }
 
@@ -107,7 +117,7 @@ a,
 
 #header-cross:before,
 #header-cross:after {
-  background-color: rgba(70, 70, 255, 1);
+  background-color: rgba(80, 80, 255, 1);
   content: "";
   position: absolute;
 }
@@ -119,25 +129,98 @@ a,
 }
 
 #header-circle {
-  border-color: rgba(255, 70, 70, 1);
+  border-color: rgb(255, 80, 80);
   border-radius: 50%;
-  border-style: solid;
   border-width: 30px;
   box-sizing: border-box;
+}
+
+#header-circle,
+.tic-tac-toe-grid-square,
+.game-result-panel {
+  border-style: solid;
+}
+
+main,
+.game-result-container {
+  gap: 64px;
 }
 
 .tic-tac-toe-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
   height: 500px;
   width: 500px;
 }
 
 .tic-tac-toe-grid-square {
-  background-color: rgba(204, 204, 204, 1);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(61, 61, 61, 1),
+    rgba(11, 11, 11, 1)
+  );
+  border-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
   height: 160px;
   width: 160px;
+}
+
+.tic-tac-toe-grid-square,
+.game-result-panel {
+  border-radius: 15px;
+  border-width: 2px;
+}
+
+.game-result-panel {
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+  gap: 2px;
+  height: 50px;
+  padding: 6px;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+  width: 200px;
+}
+
+#game-won-panel {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(80, 80, 255, 1),
+    rgba(40, 40, 128, 1)
+  );
+  color:rgba(20, 20, 64, 1);
+}
+
+#game-drawn-panel {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 80, 255, 1),
+    rgba(128, 40, 128, 1)
+  );
+  color:rgba(64, 20, 64, 1);
+}
+
+#game-lost-panel {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 80, 80, 1),
+    rgba(128, 40, 40, 1)
+  );
+  color:rgba(64, 20, 20, 1);
+}
+
+h2,
+h3 {
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 footer {
