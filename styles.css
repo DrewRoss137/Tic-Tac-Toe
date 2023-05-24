@@ -7,6 +7,9 @@ html {
 html,
 body,
 header,
+.player-turn-panels,
+.player-turn-panel,
+.header-symbols-container,
 main,
 .tic-tac-toe-container,
 .tic-tac-toe-grid,
@@ -19,6 +22,9 @@ footer {
 html,
 body,
 header,
+.player-turn-panels,
+.player-turn-panel,
+.header-symbols-container,
 main,
 .tic-tac-toe-container,
 .tic-tac-toe-grid,
@@ -30,7 +36,9 @@ footer {
 
 html,
 body,
-header,
+.player-turn-panels,
+.player-turn-panel,
+.header-symbols-container,
 main,
 .tic-tac-toe-container,
 .tic-tac-toe-grid,
@@ -48,6 +56,7 @@ h3 {
 
 html,
 body,
+.player-turn-panel-symbol-cross,
 main,
 #header-cross:before {
   height: 100%;
@@ -56,6 +65,7 @@ main,
 html,
 body,
 header,
+.player-turn-panel-symbol-cross,
 main,
 #header-cross:after,
 footer {
@@ -82,6 +92,7 @@ main,
 }
 
 header {
+  justify-content: space-around;
   padding: 16px;
   right: 0;
   top: 0;
@@ -93,6 +104,99 @@ footer {
   position: fixed;
 }
 
+.player-turn-panels {
+  gap: 8px;
+}
+
+.player-turn-panel {
+  border-color: rgba(255, 255, 255, 0.01);
+  height: 30px;
+  padding: 8px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+.player-turn-panel,
+#header-circle,
+.tic-tac-toe-grid-square,
+.game-result-panel {
+  border-style: solid;
+}
+
+.player-turn-panel,
+.tic-tac-toe-grid-square,
+.game-result-panel {
+  border-radius: 15px;
+  border-width: 2px;
+}
+
+.player-turn-panel,
+.tic-tac-toe-grid-square {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(61, 61, 61, 1),
+    rgba(11, 11, 11, 1)
+  );
+  width: 160px;
+}
+
+.player-turn-panel,
+.game-result-panel {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+#player-turn-text-panel,
+.game-result-panel {
+  text-align: center;
+}
+
+.player-turn-panel-symbols {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 1));
+  height: 40px;
+  width: 40px;
+}
+
+#player-turn-panel-symbol-cross,
+#header-cross {
+  position: relative;
+  transform: rotate(45deg);
+}
+
+#player-turn-panel-symbol-cross:before,
+#header-cross:before {
+  left: 50%;
+  margin-left: -15%;
+  width: 30%;
+  height: 100%;
+}
+
+#player-turn-panel-symbol-cross:before,
+#player-turn-panel-symbol-cross:after,
+#header-cross:before,
+#header-cross:after {
+  background-color: rgba(80, 80, 255, 1);
+  content: "";
+  position: absolute;
+}
+
+#player-turn-panel-symbol-cross:after,
+#header-cross:after {
+  height: 30%;
+  margin-top: -15%;
+  top: 50%;
+  width: 100%;
+}
+
+#player-turn-panel-symbol-circle,
+#header-circle {
+  border-color: rgb(255, 80, 80);
+  border-radius: 50%;
+  border-width: 30px;
+  box-sizing: border-box;
+}
+
+#player-turn-panel-symbol-circle {
+}
+
 a,
 .tic-tac-toe-grid-square {
   cursor: pointer;
@@ -102,43 +206,6 @@ a,
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
   height: 100px;
   width: 100px;
-}
-
-#header-cross {
-  position: relative;
-  transform: rotate(45deg);
-}
-
-#header-cross:before {
-  left: 50%;
-  margin-left: -15%;
-  width: 30%;
-}
-
-#header-cross:before,
-#header-cross:after {
-  background-color: rgba(80, 80, 255, 1);
-  content: "";
-  position: absolute;
-}
-
-#header-cross:after {
-  height: 30%;
-  margin-top: -15%;
-  top: 50%;
-}
-
-#header-circle {
-  border-color: rgb(255, 80, 80);
-  border-radius: 50%;
-  border-width: 30px;
-  box-sizing: border-box;
-}
-
-#header-circle,
-.tic-tac-toe-grid-square,
-.game-result-panel {
-  border-style: solid;
 }
 
 main,
@@ -155,30 +222,16 @@ main,
 }
 
 .tic-tac-toe-grid-square {
-  background-image: radial-gradient(
-    circle at center,
-    rgba(61, 61, 61, 1),
-    rgba(11, 11, 11, 1)
-  );
   border-color: rgba(255, 255, 255, 0.02);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
   height: 160px;
-  width: 160px;
-}
-
-.tic-tac-toe-grid-square,
-.game-result-panel {
-  border-radius: 15px;
-  border-width: 2px;
 }
 
 .game-result-panel {
   border-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   gap: 2px;
   height: 50px;
   padding: 6px;
-  text-align: center;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
   width: 200px;
 }
@@ -238,6 +291,12 @@ footer {
   padding-top: 0px;
   width: 24px;
 }
+
+/* * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 /*
 html {
