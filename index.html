@@ -18,28 +18,47 @@
     <meta charset="UTF-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title class="title" id="title">Project</title>
+    <title class="title" id="title">Tic-Tac-Toe</title>
   </head>
   <body class="body" id="body">
     <header class="header" id="header">
-      <a
-        class="github-repository-container"
-        id="cross-github-repository-container"
-        href="https://drewross137.github.io/Tic-Tac-Toe/"
-        rel="noopener"
-        target="_blank"
-      >
-        <div class="header-symbols" id="header-cross"></div>
-      </a>
-      <a
-        class="github-repository-container"
-        id="circle-github-repository-container"
-        href="https://drewross137.github.io/Tic-Tac-Toe/"
-        rel="noopener"
-        target="_blank"
-      >
-        <div class="header-symbols" id="header-circle"></div>
-      </a>
+      <div class="player-turn-panels" id="player-turn-panels">
+        <div class="player-turn-panel" id="player-turn-text-panel">
+          <h2 class="player-turn-panel-text" id="player-turn-panel-text">
+            Player 1's Turn
+          </h2>
+        </div>
+        <div class="player-turn-panel" id="player-turn-symbol-panel">
+          <div
+            class="player-turn-panel-symbols"
+            id="player-turn-panel-symbol-cross"
+          ></div>
+          <!-- <div
+            class="player-turn-panel-symbols"
+            id="player-turn-panel-symbol-circle"
+          ></div> -->
+        </div>
+      </div>
+      <div class="header-symbols-container" id="header-symbols-container">
+        <a
+          class="github-repository-container"
+          id="cross-github-repository-container"
+          href="https://drewross137.github.io/Tic-Tac-Toe/"
+          rel="noopener"
+          target="_blank"
+        >
+          <div class="header-symbols" id="header-cross"></div>
+        </a>
+        <a
+          class="github-repository-container"
+          id="circle-github-repository-container"
+          href="https://drewross137.github.io/Tic-Tac-Toe/"
+          rel="noopener"
+          target="_blank"
+        >
+          <div class="header-symbols" id="header-circle"></div>
+        </a>
+      </div>
     </header>
     <main class="main" id="main">
       <div class="tic-tac-toe-container" id="tic-tac-toe-container">
