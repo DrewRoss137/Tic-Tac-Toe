@@ -24,19 +24,21 @@
     <header class="header" id="header">
       <div class="player-turn-panels" id="player-turn-panels">
         <div class="player-turn-panel" id="player-turn-text-panel">
-          <h2 class="player-turn-panel-text" id="player-turn-panel-text">
-            Player 1's Turn
+          <h2
+            class="player-turn-panel-text"
+            id="player-turn-panel-player-1-name-text"
+          >
+            Player 1's
+            <h2 class="player-turn-panel-text" id="player-turn-panel-turn-text">
+              Turn
+            </h2>
           </h2>
         </div>
         <div class="player-turn-panel" id="player-turn-symbol-panel">
           <div
-            class="player-turn-panel-symbols"
+            class="player-turn-panel-symbol"
             id="player-turn-panel-symbol-cross"
           ></div>
-          <!-- <div
-            class="player-turn-panel-symbols"
-            id="player-turn-panel-symbol-circle"
-          ></div> -->
         </div>
       </div>
       <div class="header-symbols-container" id="header-symbols-container">
@@ -48,16 +50,20 @@
           target="_blank"
         >
           <div class="header-symbols" id="header-cross"></div>
-        </a>
-        <a
-          class="github-repository-container"
-          id="circle-github-repository-container"
-          href="https://drewross137.github.io/Tic-Tac-Toe/"
-          rel="noopener"
-          target="_blank"
-        >
           <div class="header-symbols" id="header-circle"></div>
         </a>
+      </div>
+      <div class="reset-button-container" id="reset-button-container">
+        <svg
+          class="reset-button-icon"
+          id="reset-button-icon"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3Z"
+          />
+        </svg>
       </div>
     </header>
     <main class="main" id="main">
