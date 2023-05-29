@@ -22,19 +22,13 @@
   </head>
   <body class="body" id="body">
     <div class="overlay" id="overlay">
-      <div class="menu" id="ai-menu">
-        <div class="menu-header-container" id="ai-menu-header-container">
-          <div
-            class="menu-header-icons-container"
-            id="ai-header-icons-container"
-          >
-            <div
-              class="menu-button-icon-container"
-              id="ai-button-icon-container"
-            >
+      <!-- <div class="menu" id="ai-menu">
+        <div class="menu-header" id="ai-header">
+          <div class="menu-header-container" id="ai-header-container">
+            <div class="menu-icon-container" id="ai-icon-container">
               <svg
-                class="menu-button-icon"
-                id="ai-button-icon"
+                class="menu-icon-svg"
+                id="ai-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -43,13 +37,11 @@
                 />
               </svg>
             </div>
-            <div
-              class="close-button-icon-container"
-              id="ai-close-button-icon-container"
-            >
+            <h1 class="menu-title" id="ai-title">AI Game Settings</h1>
+            <div class="menu-close-icon-container" id="ai-close-icon-container">
               <svg
-                class="close-button-icon"
-                id="ai-close-button-icon"
+                class="menu-close-icon-svg"
+                id="ai-close-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -59,23 +51,69 @@
               </svg>
             </div>
           </div>
-          <h1 class="menu-header-title" id="ai-menu-title">AI Settings</h1>
         </div>
-        <div class="menu-body-container" id="ai-menu-body-container"></div>
-      </div>
-      <div class="menu" id="player-menu">
-        <div class="menu-header-container" id="player-menu-header-container">
-          <div
-            class="menu-header-icons-container"
-            id="player-header-icons-container"
-          >
-            <div
-              class="menu-button-icon-container"
-              id="player-button-icon-container"
-            >
+        <div class="menu-body" id="ai-body">
+          <div class="menu-settings" id="ai-settings">
+            <div class="menu-setting" id="ai-player-name">
+              <h2 class="menu-setting-text" id="ai-player-name-text">
+                Player Name
+              </h2>
+              <input
+                class="menu-setting-input"
+                id="ai-player-name-input"
+                minlength="1"
+                maxlength="16"
+                placeholder="Player Name"
+                required
+                type="text"
+              />
+            </div>
+            <div class="menu-setting" id="ai-ai-name">
+              <h2 class="menu-setting-text" id="ai-ai-name-text">AI Name</h2>
+              <input
+                class="menu-setting-input"
+                id="ai-ai-name-input"
+                minlength="1"
+                maxlength="16"
+                placeholder="AI Name"
+                required
+                type="text"
+              />
+            </div>
+            <div class="menu-setting" id="ai-player-symbol">
+              <h2 class="menu-setting-text" id="ai-player-symbol-text">
+                Player Symbol
+              </h2>
+              <div
+                class="menu-symbol-selection"
+                id="ai-player-symbol-selection"
+              >
+                <div class="menu-symbol-container" id="cross-symbol-container">
+                  <div class="cross-symbol" id="menu-cross-symbol"></div>
+                </div>
+                <div class="menu-symbol-container" id="circle-symbol-container">
+                  <div class="circle-symbol" id="menu-circle-symbol"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-buttons" id="ai-buttons">
+            <button class="menu-cancel-button" id="ai-cancel-button">
+              Cancel
+            </button>
+            <button class="menu-continue-button" id="ai-continue-button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="menu" id="player-menu">
+        <div class="menu-header" id="player-header">
+          <div class="menu-header-container" id="player-header-container">
+            <div class="menu-icon-container" id="player-icon-container">
               <svg
-                class="menu-button-icon"
-                id="player-button-icon"
+                class="menu-icon-svg"
+                id="player-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -84,13 +122,14 @@
                 />
               </svg>
             </div>
+            <h1 class="menu-title" id="player-title">Player Game Settings</h1>
             <div
-              class="close-button-icon-container"
-              id="player-close-button-icon-container"
+              class="menu-close-icon-container"
+              id="player-close-icon-container"
             >
               <svg
-                class="close-button-icon"
-                id="player-close-button-icon"
+                class="menu-close-icon-svg"
+                id="player-close-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -100,25 +139,69 @@
               </svg>
             </div>
           </div>
-          <h1 class="menu-header-title" id="player-menu=title">
-            Player Settings
-          </h1>
         </div>
-        <div class="menu-body-container" id="player-menu-body-container"></div>
-      </div>
+        <div class="menu-body" id="player-body">
+          <div class="menu-settings" id="player-settings">
+            <div class="menu-setting" id="player-player-name">
+              <h2 class="menu-setting-text" id="player-player-1-name-text">
+                Player 1 Name
+              </h2>
+              <input
+                class="menu-setting-input"
+                id="player-player-1-name-input"
+                minlength="1"
+                maxlength="16"
+                placeholder="Player 1 Name"
+                required
+                type="text"
+              />
+            </div>
+            <div class="menu-setting" id="player-player-1-name">
+              <h2 class="menu-setting-text" id="player-player-2-name-text">Player 2 Name</h2>
+              <input
+                class="menu-setting-input"
+                id="player-player-2-name-input"
+                minlength="1"
+                maxlength="16"
+                placeholder="Player 2 Name"
+                required
+                type="text"
+              />
+            </div>
+            <div class="menu-setting" id="player-player-symbol">
+              <h2 class="menu-setting-text" id="player-player-1-symbol-text">
+                Player 1 Symbol
+              </h2>
+              <div
+                class="menu-symbol-selection"
+                id="player-1-player-symbol-selection"
+              >
+                <div class="menu-symbol-container" id="cross-symbol-container">
+                  <div class="cross-symbol" id="menu-cross-symbol"></div>
+                </div>
+                <div class="menu-symbol-container" id="circle-symbol-container">
+                  <div class="circle-symbol" id="menu-circle-symbol"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-buttons" id="player-buttons">
+            <button class="menu-cancel-button" id="player-cancel-button">
+              Cancel
+            </button>
+            <button class="menu-continue-button" id="player-continue-button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div> -->
       <div class="menu" id="reset-menu">
-        <div class="menu-header-container" id="reset-menu-header-container">
-          <div
-            class="menu-header-icons-container"
-            id="reset-header-icons-container"
-          >
-            <div
-              class="menu-button-icon-container"
-              id="reset-button-icon-container"
-            >
+        <div class="menu-header" id="reset-header">
+          <div class="menu-header-container" id="reset-header-container">
+            <div class="menu-icon-container" id="reset-icon-container">
               <svg
-                class="menu-button-icon"
-                id="reset-button-icon"
+                class="menu-icon-svg"
+                id="reset-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -127,13 +210,14 @@
                 />
               </svg>
             </div>
+            <h1 class="menu-title" id="reset-title">Reset Game</h1>
             <div
-              class="close-button-icon-container"
-              id="reset-close-button-icon-container"
+              class="menu-close-icon-container"
+              id="reset-close-icon-container"
             >
               <svg
-                class="close-button-icon"
-                id="player-close-button-icon"
+                class="menu-close-icon-svg"
+                id="reset-close-icon-svg"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -142,28 +226,35 @@
                 />
               </svg>
             </div>
-            <span class="menu-text" id="reset-menu-explanatory-text"
-              >This will erase all Tic-Tac-Toe game data, restoring player
-              scores to their default values.</span
-            >
-            <span class="menu-text" id="reset-menu-warning-text"
-              >This action <i>cannot</i> be undone!</span
-            >
-            <div class="menu-button-container" id="reset-menu-buttons">
-              <button class="menu-button" id="reset-menu-cancel-button">
-                Cancel
-              </button>
-              <button class="menu-button" id="reset-menu-continue-button">
-                Continue
-              </button>
-            </div>
           </div>
-          <h1 class="menu-header-title" id="reset-menu-title">Reset Game</h1>
         </div>
-        <div class="menu-body-container" id="reset-menu-body-container"></div>
+        <div class="menu-body" id="reset-body">
+          <div class="menu-text" id="reset-text">
+            <h2 class="reset-text" id="reset-erase-text">
+              This will reset the current Tic-Tac-Toe game, erasing all current
+              game progress - including the game board state, and player moves.
+            </h2>
+            <h2 class="reset-text" id="reset-progress-text">
+              Any accumulated player statistics, such as wins, losses, and
+              draws, will also be reset.
+            </h2>
+            <h2 class="reset-text" id="reset-warning-text">
+              This action <i>cannot</i> be undone, and you won't be able to
+              recover any of the game data.
+            </h2>
+          </div>
+          <div class="menu-buttons" id="ai-buttons">
+            <button class="menu-cancel-button" id="ai-cancel-button">
+              Cancel
+            </button>
+            <button class="menu-continue-button" id="ai-continue-button">
+              Continue
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <header class="header" id="header">
+    <!-- <header class="header" id="header">
       <div class="player-turn-panels" id="player-turn-panels">
         <div class="player-turn-panel" id="player-turn-text-panel">
           <h2
@@ -274,17 +365,44 @@
             id="ai-tic-tac-toe-grid-square-9"
           ></div>
         </div>
-        <!-- <div class="tic-tac-toe-grid" id="player-tic-tac-toe-grid">
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-1"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-2"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-3"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-4"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-5"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-6"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-7"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-8"></div>
-          <div class="tic-tac-toe-grid-square" id="player-tic-tac-toe-grid-square-9"></div>
-        </div> -->
+        <div class="tic-tac-toe-grid" id="player-tic-tac-toe-grid">
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-1"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-2"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-3"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-4"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-5"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-6"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-7"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-8"
+          ></div>
+          <div
+            class="tic-tac-toe-grid-square"
+            id="player-tic-tac-toe-grid-square-9"
+          ></div>
+        </div>
       </div>
       <div class="game-result-container" id="game-result-container">
         <div class="game-result-panel" id="game-won-panel">
@@ -350,7 +468,7 @@
           />
         </svg>
       </a>
-    </footer>
+    </footer> -->
     <script src="scripts.js" defer></script>
   </body>
 </html>
