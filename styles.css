@@ -1,8 +1,413 @@
 html {
-  color: rgba(255, 255, 255, 1);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+
+html,
+input,
+input::placeholder {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html,
+input,
+button {
+  color: rgba(255, 255, 255, 1);
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body,
+button {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(51, 51, 51, 1),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+body,
+h1,
+h2,
+button {
+  margin: 0;
+}
+
+.overlay,
+.menu-symbol-container,
+.cross-symbol:before {
+  height: 100%;
+}
+
+.overlay,
+.menu-header,
+.menu-header-container,
+.menu-body,
+.menu-setting,
+.menu-symbol-container,
+.cross-symbol:after {
+  width: 100%;
+}
+
+.overlay {
+  display: block;
+  z-index: 9999;
+}
+
+.overlay {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+
+.overlay {
+  right: 0;
+  top: 0;
+}
+
+.menu,
+.menu-header,
+.menu-header-container,
+.menu-body,
+.menu-settings,
+.menu-setting,
+.menu-symbol-selection,
+.menu-symbol-container,
+.menu-buttons,
+button,
+.menu-text {
+  display: flex;
+}
+
+.menu,
+.menu-header,
+.menu-header-container,
+.menu-body,
+.menu-settings,
+.menu-setting,
+.menu-symbol-selection,
+.menu-symbol-container,
+.menu-buttons,
+button,
+.menu-text {
+  align-items: center;
+}
+
+.menu,
+.menu-header,
+.menu-header-container,
+.menu-body,
+.menu-settings,
+.menu-symbol-selection,
+.menu-symbol-container,
+.menu-buttons,
+button,
+.menu-text {
+  justify-content: center;
+}
+
+.menu,
+input,
+.menu-symbol-selection,
+.menu-symbol-container,
+button {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+
+.menu,
+input,
+.menu-symbol-selection,
+.menu-symbol-container,
+#cross-symbol-container:hover,
+#circle-symbol-container,
+#circle-symbol-container:hover,
+.circle-symbol,
+button {
+  border-style: solid;
+}
+
+.menu,
+.menu-symbol-selection,
+.menu-symbol-container,
+button {
+  border-radius: 15px;
+}
+
+.menu,
+input,
+.menu-symbol-selection,
+.menu-symbol-container,
+#cross-symbol-container:hover,
+#circle-symbol-container:hover,
+button {
+  border-width: 2px;
+}
+
+.menu {
+  left: 50%;
+}
+
+.menu {
+  top: 50%;
+}
+
+.menu,
+input,
+.menu-symbol-selection {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(71, 71, 71, 1),
+    rgba(21, 21, 21, 1)
+  );
+}
+
+.menu {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+  padding: 16px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.menu,
+.menu-body,
+.menu-settings {
+  flex-direction: column;
+}
+
+.menu,
+.menu-header-container,
+.menu-body,
+.menu-settings {
+  gap: 32px;
+}
+
+.menu-icon-container,
+.menu-icon-svg,
+.menu-close-icon-container,
+.menu-close-icon-svg {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-icon-svg {
+  fill: rgb(150, 255, 255);
+}
+
+.menu-icon-svg,
+.menu-close-icon-svg {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 1));
+}
+
+.menu-close-icon-svg {
+  fill: rgba(255, 255, 150, 1);
+}
+
+.menu-close-icon-svg,
+.menu-symbol-container,
+button {
+  transition: 0.75s all ease-in-out;
+}
+
+.menu-close-icon-svg,
+.menu-symbol-container,
+button {
+  cursor: pointer;
+}
+
+.menu-close-icon-svg:hover,
+.menu-symbol-container:hover,
+button:hover {
+  filter: brightness(1.05);
+}
+
+.menu-close-icon-svg:hover {
+  filter: drop-shadow(0px 0px 2px rgba(255, 255, 150, 1));
+}
+
+.menu-close-icon-svg:hover,
+.menu-symbol-container:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 43px;
+}
+
+h1,
+h2,
+button {
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
+}
+
+.menu-setting {
+  gap: 64px;
+  justify-content: space-between;
+}
+
+h2,
+input,
+input::placeholder,
+button {
+  font-size: 16px;
+}
+
+input {
+  border-radius: 10px;
+  height: 15px;
+  font-size: 18px;
+  outline: none;
+  width: 200px;
+}
+
+input,
+.menu-symbol-selection {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(71, 71, 71, 1),
+    rgba(21, 21, 21, 1)
+  );
+}
+
+input,
+.menu-symbol-selection,
+.menu-symbol-container,
+button {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+  padding: 8px;
+}
+
+input::placeholder {
+  color: rgba(61, 61, 61, 1);
+}
+
+input,
+input::placeholder,
+button {
+  font-weight: 900;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.menu-symbol-container {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(61, 61, 61, 1),
+    rgba(11, 11, 11, 1)
+  );
+}
+
+.menu-symbol-selection {
+  gap: 10px;
+  width: 200px;
+}
+
+.menu-symbol-container {
+  padding: 12px;
+}
+
+.menu-symbol-container,
+.circle-symbol {
+  box-sizing: border-box;
+}
+
+#cross-symbol-container:hover {
+  border-color: rgba(100, 100, 255, 1);
+  box-shadow: 0px 0px 5px rgba(100, 100, 255, 1);
+}
+
+#circle-symbol-container:hover {
+  border-color: rgba(255, 100, 100, 1);
+  box-shadow: 0px 0px 5px rgba(255, 100, 100, 1);
+}
+
+.cross-symbol {
+  position: relative;
+}
+
+.cross-symbol:before {
+  left: 50%;
+  margin-left: -15%;
+  width: 30%;
+}
+
+.cross-symbol:after {
+  height: 30%;
+  margin-top: -15%;
+  top: 50%;
+}
+
+.cross-symbol:before,
+.cross-symbol:after {
+  background-color: rgba(100, 100, 255, 1);
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.circle-symbol {
+  border-color: rgba(255, 100, 100, 1);
+  border-radius: 50%;
+  border-width: 17px;
+}
+
+#menu-cross-symbol {
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 255, 1));
+}
+
+#menu-circle-symbol {
+  filter: drop-shadow(0px 0px 2px rgba(255, 0, 0, 1));
+}
+
+#menu-cross-symbol,
+#menu-circle-symbol {
+  height: 60px;
+  width: 60px;
+}
+
+.menu-buttons {
+  gap: 8px;
+}
+
+button {
+  width: 160px;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.menu-text {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-text {
+  gap: 12px;
+}
+
+.reset-text {
+  text-align: center;
+  word-spacing: 2px;
+}
+
+#reset-erase-text {
+  max-width: 400px;
+}
+
+#reset-progress-text {
+  max-width: 370px;
+}
+
+#reset-warning-text {
+  max-width: 350px;
+}
+
+/*
 
 html,
 body,
@@ -88,18 +493,6 @@ main,
 #header-cross:after,
 footer {
   width: 100%;
-}
-
-body {
-  background-attachment: fixed;
-  background-image: radial-gradient(
-    circle at center,
-    rgba(51, 51, 51, 1),
-    rgba(0, 0, 0, 1)
-  );
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body,
@@ -477,4 +870,4 @@ footer {
   padding-right: 3px;
   padding-top: 0px;
   width: 24px;
-}
+} */
