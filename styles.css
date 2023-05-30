@@ -33,13 +33,16 @@ button {
 body,
 h1,
 h2,
-button {
+button,
+h3 {
   margin: 0;
 }
 
 .overlay,
 .menu-symbol-container,
-.cross-symbol:before {
+.cross-symbol:before,
+#player-turn-cross:before,
+#header-cross:before {
   height: 100%;
 }
 
@@ -49,7 +52,10 @@ button {
 .menu-body,
 .menu-setting,
 .menu-symbol-container,
-.cross-symbol:after {
+.cross-symbol:after,
+header,
+#player-turn-cross:after,
+#header-cross:after {
   width: 100%;
 }
 
@@ -58,13 +64,15 @@ button {
   z-index: 9999;
 }
 
-.overlay {
+.overlay,
+header {
   bottom: 0;
   left: 0;
   position: fixed;
 }
 
-.overlay {
+.overlay,
+header {
   right: 0;
   top: 0;
 }
@@ -79,7 +87,12 @@ button {
 .menu-symbol-container,
 .menu-buttons,
 button,
-.menu-text {
+.menu-text,
+header,
+.player-turn,
+.player-turn-container,
+.header-buttons,
+.header-button {
   display: flex;
 }
 
@@ -93,7 +106,13 @@ button,
 .menu-symbol-container,
 .menu-buttons,
 button,
-.menu-text {
+.menu-text,
+.player-turn-container,
+header,
+.player-turn,
+.player-turn-container,
+.header-buttons,
+.header-button {
   align-items: center;
 }
 
@@ -106,7 +125,11 @@ button,
 .menu-symbol-container,
 .menu-buttons,
 button,
-.menu-text {
+.menu-text,
+.player-turn,
+.player-turn-container,
+.header-buttons,
+.header-button {
   justify-content: center;
 }
 
@@ -114,7 +137,9 @@ button,
 input,
 .menu-symbol-selection,
 .menu-symbol-container,
-button {
+button,
+.player-turn-container,
+.header-button {
   border-color: rgba(255, 255, 255, 0.02);
 }
 
@@ -126,14 +151,20 @@ input,
 #circle-symbol-container,
 #circle-symbol-container:hover,
 .circle-symbol,
-button {
+button,
+.player-turn-container,
+#player-turn-circle,
+#header-circle,
+.header-button {
   border-style: solid;
 }
 
 .menu,
 .menu-symbol-selection,
 .menu-symbol-container,
-button {
+button,
+.player-turn-container,
+.header-button {
   border-radius: 15px;
 }
 
@@ -143,7 +174,9 @@ input,
 .menu-symbol-container,
 #cross-symbol-container:hover,
 #circle-symbol-container:hover,
-button {
+button,
+.player-turn-container,
+.header-button {
   border-width: 2px;
 }
 
@@ -208,19 +241,22 @@ input,
 
 .menu-close-icon-svg,
 .menu-symbol-container,
-button {
+button,
+.header-button {
   transition: 0.75s all ease-in-out;
 }
 
 .menu-close-icon-svg,
 .menu-symbol-container,
-button {
+button,
+.header-button {
   cursor: pointer;
 }
 
 .menu-close-icon-svg:hover,
 .menu-symbol-container:hover,
-button:hover {
+button:hover,
+.header-button:hover {
   filter: brightness(1.05);
 }
 
@@ -229,42 +265,57 @@ button:hover {
 }
 
 .menu-close-icon-svg:hover,
-.menu-symbol-container:hover {
+.menu-symbol-container:hover,
+.header-button:hover {
   transform: scale(1.05);
 }
 
-h1 {
+.menu-title {
   font-size: 43px;
 }
 
-h1,
-h2,
-button {
+.menu-title,
+.menu-settings,
+button,
+.reset-text,
+.player-turn-text {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 1);
 }
 
 .menu-setting {
   gap: 64px;
+}
+
+.menu-setting,
+header {
   justify-content: space-between;
 }
 
-h2,
+.menu-settings,
 input,
 input::placeholder,
-button {
+button,
+.reset-text,
+.player-turn-text {
   font-size: 16px;
 }
 
 input {
   border-radius: 10px;
-  height: 15px;
   font-size: 18px;
   outline: none;
   width: 200px;
 }
 
 input,
-.menu-symbol-selection {
+#player-turn-circle {
+  height: 15px;
+}
+
+input,
+.menu-symbol-selection,
+.player-turn-container,
+.header-button {
   background-image: radial-gradient(
     circle at center,
     rgba(71, 71, 71, 1),
@@ -275,7 +326,9 @@ input,
 input,
 .menu-symbol-selection,
 .menu-symbol-container,
-button {
+button,
+.player-turn-container,
+.header-button {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
   padding: 8px;
 }
@@ -304,12 +357,14 @@ button {
   width: 200px;
 }
 
-.menu-symbol-container {
+.menu-symbol-container,
+header {
   padding: 12px;
 }
 
 .menu-symbol-container,
-.circle-symbol {
+.circle-symbol,
+header {
   box-sizing: border-box;
 }
 
@@ -323,24 +378,34 @@ button {
   box-shadow: 0px 0px 5px rgba(255, 100, 100, 1);
 }
 
-.cross-symbol {
+.cross-symbol,
+#player-turn-cross,
+#header-cross {
   position: relative;
 }
 
-.cross-symbol:before {
+.cross-symbol:before,
+#player-turn-cross:before,
+#header-cross:before {
   left: 50%;
   margin-left: -15%;
   width: 30%;
 }
 
-.cross-symbol:after {
+.cross-symbol:after,
+#player-turn-cross:after,
+#header-cross:after {
   height: 30%;
   margin-top: -15%;
   top: 50%;
 }
 
 .cross-symbol:before,
-.cross-symbol:after {
+.cross-symbol:after,
+#player-turn-cross:before,
+#player-turn-cross:after,
+#header-cross:before,
+#header-cross:after {
   background-color: rgba(100, 100, 255, 1);
   content: "";
   position: absolute;
@@ -348,9 +413,14 @@ button {
 }
 
 .circle-symbol {
+  border-width: 17px;
+}
+
+.circle-symbol,
+#player-turn-circle,
+#header-circle {
   border-color: rgba(255, 100, 100, 1);
   border-radius: 50%;
-  border-width: 17px;
 }
 
 #menu-cross-symbol {
@@ -367,7 +437,8 @@ button {
   width: 60px;
 }
 
-.menu-buttons {
+.menu-buttons,
+.player-turn {
   gap: 8px;
 }
 
@@ -405,6 +476,94 @@ button:hover {
 
 #reset-warning-text {
   max-width: 350px;
+}
+
+header {
+  height: 132px;
+}
+
+.player-turn-container,
+#player-turn-cross {
+  height: 40px;
+}
+
+#player-turn-text-container {
+  gap: 3.5px;
+}
+
+.player-turn-text {
+  font-size: 20px;
+}
+
+.player-turn-text.player-1 {
+  color: rgba(100, 100, 255, 1);
+}
+
+.player-turn-text.player-2 {
+  color: rgba(255, 100, 100, 1);
+}
+
+.player-turn-symbol {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+}
+
+.overlay.inactive,
+.menu.inactive,
+.player-turn-symbol.inactive {
+  display: none;
+}
+
+#player-turn-cross {
+  width: 40px;
+}
+
+#player-turn-circle {
+  border-width: 12.72px;
+  width: 15px;
+}
+
+.header-symbols-container {
+  display: flex;
+}
+
+.header-symbol {
+  height: 100px;
+  width: 100px;
+}
+
+.header-symbols {
+  left: 50%;
+}
+
+.header-symbols {
+  top: 50%;
+  display: flex;
+}
+
+.header-symbols {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#header-circle {
+  height: 50px;
+  width: 50px;
+  border-width: 25px;
+}
+
+.header-buttons {
+  gap: 8px;
+}
+
+.header-button {
+  width: 40px;
+  height: 40px;
+}
+
+.header-svg {
+
+  fill: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 1));
 }
 
 /*
@@ -617,7 +776,7 @@ header {
 }
 
 .menu,
-.header-symbols-container {
+.header-symbols{
   position: absolute;
   transform: translate(-50%, -50%);
 }
