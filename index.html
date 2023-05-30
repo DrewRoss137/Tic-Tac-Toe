@@ -21,8 +21,8 @@
     <title class="title" id="title">Tic-Tac-Toe</title>
   </head>
   <body class="body" id="body">
-    <div class="overlay" id="overlay">
-      <!-- <div class="menu" id="ai-menu">
+    <!-- <div class="overlay" id="overlay">
+      <div class="menu" id="ai-menu">
         <div class="menu-header" id="ai-header">
           <div class="menu-header-container" id="ai-header-container">
             <div class="menu-icon-container" id="ai-icon-container">
@@ -106,8 +106,8 @@
             </button>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="menu" id="player-menu">
+      </div>
+      <div class="menu" id="player-menu">
         <div class="menu-header" id="player-header">
           <div class="menu-header-container" id="player-header-container">
             <div class="menu-icon-container" id="player-icon-container">
@@ -157,7 +157,9 @@
               />
             </div>
             <div class="menu-setting" id="player-player-1-name">
-              <h2 class="menu-setting-text" id="player-player-2-name-text">Player 2 Name</h2>
+              <h2 class="menu-setting-text" id="player-player-2-name-text">
+                Player 2 Name
+              </h2>
               <input
                 class="menu-setting-input"
                 id="player-player-2-name-input"
@@ -194,7 +196,7 @@
             </button>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="menu" id="reset-menu">
         <div class="menu-header" id="reset-header">
           <div class="menu-header-container" id="reset-header-container">
@@ -232,14 +234,14 @@
           <div class="menu-text" id="reset-text">
             <h2 class="reset-text" id="reset-erase-text">
               This will reset the current Tic-Tac-Toe game, erasing all current
-              game progress - including the game board state, and player moves.
+              game progress, including the game board state, and player moves.
             </h2>
             <h2 class="reset-text" id="reset-progress-text">
               Any accumulated player statistics, such as wins, losses, and
               draws, will also be reset.
             </h2>
             <h2 class="reset-text" id="reset-warning-text">
-              This action <i>cannot</i> be undone, and you won't be able to
+              This action <i>cannot</i> be undone, and you will not be able to
               recover any of the game data.
             </h2>
           </div>
@@ -253,44 +255,40 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- <header class="header" id="header">
-      <div class="player-turn-panels" id="player-turn-panels">
-        <div class="player-turn-panel" id="player-turn-text-panel">
-          <h2
-            class="player-turn-panel-text"
-            id="player-turn-panel-player-1-name-text"
-          >
+    </div> -->
+    <header class="header" id="header">
+      <div class="player-turn" id="player-turn">
+        <div class="player-turn-container" id="player-turn-text-container">
+          <h3 class="player-turn-text player-1" id="player-turn-name-text">
             Player 1's
-            <h2 class="player-turn-panel-text" id="player-turn-panel-turn-text">
-              Turn
-            </h2>
-          </h2>
+          </h3>
+          <h3 class="player-turn-text" id="player-turn-turn-text">Turn</h3>
         </div>
-        <div class="player-turn-panel" id="player-turn-symbol-panel">
+        <div class="player-turn-container" id="player-turn-symbol-container">
+          <div class="player-turn-symbol" id="player-turn-cross"></div>
           <div
-            class="player-turn-panel-symbol"
-            id="player-turn-panel-symbol-cross"
+            class="player-turn-symbol inactive"
+            id="player-turn-circle"
           ></div>
         </div>
       </div>
-      <div class="header-symbols-container" id="header-symbols-container">
+      <div class="header-symbols" id="header-symbols">
         <a
-          class="github-repository-container"
-          id="cross-github-repository-container"
+          class="header-symbols-container"
+          id="header-symbols-container"
           href="https://drewross137.github.io/Tic-Tac-Toe/"
           rel="noopener"
           target="_blank"
         >
-          <div class="header-symbols" id="header-cross"></div>
-          <div class="header-symbols" id="header-circle"></div>
+          <div class="header-symbol" id="header-cross"></div>
+          <div class="header-symbol" id="header-circle"></div>
         </a>
       </div>
-      <div class="header-buttons-container" id="ai-buttons-container">
-        <div class="header-button-container" id="ai-button-container">
+      <div class="header-buttons" id="header-buttons">
+        <div class="header-button" id="ai-button">
           <svg
-            class="header-button-icon"
-            id="ai-button-icon"
+            class="header-svg"
+            id="ai-svg"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -299,10 +297,10 @@
             />
           </svg>
         </div>
-        <div class="header-button-container" id="reset-button-container">
+        <div class="header-button" id="player-button">
           <svg
-            class="header-button-icon"
-            id="player-button-icon"
+            class="header-svg"
+            id="player-svg"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -311,10 +309,10 @@
             />
           </svg>
         </div>
-        <div class="header-button-container" id="reset-button-container">
+        <div class="header-button" id="reset-button">
           <svg
-            class="header-button-icon"
-            id="reset-button-icon"
+            class="header-svg"
+            id="reset-svg"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -325,7 +323,7 @@
         </div>
       </div>
     </header>
-    <main class="main" id="main">
+    <!-- <main class="main" id="main">
       <div class="tic-tac-toe-container" id="tic-tac-toe-container">
         <div class="tic-tac-toe-grid" id="ai-tic-tac-toe-grid">
           <div
